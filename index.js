@@ -216,7 +216,6 @@ for (let i = 0; i < mdFileLines.length; i++) {
   const line = mdFileLines[i];
 
   if (line.startsWith('#')) {
-    // TODO: обрабатывать как-то ошибки тут. Что мы должны делать, если строка с датой неправильная?
     createdDate = getDateFromLine(line);
 
     continue;
@@ -226,7 +225,6 @@ for (let i = 0; i < mdFileLines.length; i++) {
     if (numberedEntryRe.test(line)) {
       startOfWordIdx = i;
 
-      // TODO: думаю, странное условие
       if (csvItem.word !== '' && csvItem.partOfSpeech !== '') {
         csvString += createCsvLine(csvItem);
 
