@@ -1,15 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-const semanticFields = [
-  'food & cooking',
-  'programming & it',
-  'economics',
-  'law & crime',
-  'anatomy & health',
-  'animals',
-];
-
 const partsOfSpeech = [
   'noun',
   'verb',
@@ -18,6 +9,7 @@ const partsOfSpeech = [
   'collocation',
   'phrasal verb',
   'adverb',
+  'idiom',
   'contraction',
   'preposition',
   'union',
@@ -41,6 +33,22 @@ const months = {
 const numberedEntryRe = /^\d+\)/; // начинаем с цифры и закрывающей в конце скобки
 const russianLetterEntryRe = /^[А-Яа-яЁё]\)/; // начинаем с одной буквы из русского алфавита и закрывающей в конце скобки
 const translationAndMeaningRe = /\)\s*[—–-−-]\s*(.+)$/; // находим ), любые пробелы, любый тип тире/дефиса/минуса, любые пробелы, берем все до конца строки
+const categories = [
+  'food & cooking',
+  'anatomy & health',
+  'weather',
+  'programming & it',
+  'flora',
+  'fauna',
+  'auto',
+  'economics',
+  'none',
+];
+
+let category = process.argv[2];
+if (!category || !categories.includes(category)) {
+  category = 'none';
+}
 
 // находит все двойные кавычки и заменяют каждую на две кавычки
 function escapeCsvQuotes(value) {
@@ -182,6 +190,7 @@ function createCsvLine(csvItem) {
       `"${escapeCsvQuotes(csvItem.translation)}"`,
       `"${escapeCsvQuotes(csvItem.meaning)}"`,
       `"${escapeCsvQuotes(csvItem.comment)}"`,
+      `${category}`,
     ].join(';') + '\n'
   );
 }
@@ -190,7 +199,7 @@ function getTextAfterClosingParenthesis(text) {
   return text.substring(text.indexOf(')') + 1);
 }
 
-// structure: createdDate | word | partOfSpeech | translation | meaning | comment
+// structure: createdDate | word | partOfSpeech | translation | meaning | comment | category
 let csvString = '';
 
 let unparsedWordsString = '';
@@ -248,8 +257,11 @@ for (let i = 0; i < mdFileLines.length; i++) {
         throw new Error('partOfSpeech');
       }
 
-      if (partOfSpeech === 'verb' && !word.startsWith('to')) {
-        word = `to ${word}`;
+      if (
+        (partOfSpeech === 'verb' || partOfSpeech === 'phrasal verb') &&
+        word.startsWith('to')
+      ) {
+        word = word.slice(2).trimStart();
       }
 
       const match = lineContent.match(translationAndMeaningRe);
@@ -269,6 +281,9 @@ for (let i = 0; i < mdFileLines.length; i++) {
       const { translation, meaning } = splitTranslationAndMeaning(
         translationAndMeaning,
       );
+      if (!translation) {
+        throw new Error('translation');
+      }
 
       csvItem.createdDate = createdDate;
       csvItem.word = word;

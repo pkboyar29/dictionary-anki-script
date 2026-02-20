@@ -104,13 +104,15 @@ Go ahead with your own life and leave me alone. Займись своей жиз
 
 Go ahead, tale a closer look. Давай, посмотри поближе.
 
+Go ahead. Продолжай. Начинай. Начинай первый
+
 43)go along with (phrasal verb) – соглашаться с чьим-то мнением или решением, поддержать идею
 
 I can’t go along with this. Я не могу согласиться с этим.
 
 You have to pretend to go along with him. Ты должен притвориться, что согласен с ним.
 
-44)go away (phrasal verb) – а)уходи, проваливай! б)уехать или выбраться куда-то, особенно на выходные
+44)go away (phrasal verb) – уехать или выбраться куда-то, уходи!, проваливай!
 
 They expect us to go away for the weekend. Они ожидают, что мы уедем куда-нибудь на выходные
 
@@ -150,7 +152,7 @@ Why does he carry a gun?
 
 53)chimp, chimpanzees (noun) – шимпанзе
 
-54)stray (adjective) – бездомный (about animals)
+54)stray (adjective) – бездомный (о животных)
 
 55)pants (noun) – штаны
 
@@ -174,17 +176,13 @@ I am sure that my behavior was absolutely flawless
 
 60)prepare meal (collocation) – готовить еду
 
-61)subway (noun) – метро
+61)subway (noun) – метро (America)
 
-**ride the subway** – ездить в метро
-
-**Subway** – American metro
+ride the subway – ездить в метро
 
 synonym - metro
 
 Metro - in the rest of the world
-
-62)nah – нет (видимо сленг)
 
 63)anyone else (phrase) – кто-нибудь еще
 
@@ -193,8 +191,6 @@ Metro - in the rest of the world
 # 2 Feb 2023
 
 65)leisure time (phrase) – свободное время (время для отдыха)
-
-66)reconnect with friends (collocation) – восстановить связь с друзьями, снова общаться
 
 67)bumper (noun) – бампер
 
@@ -238,7 +234,7 @@ The children were playing and laughing, making the room noisy and cheerful.
 
 # 9 Feb 2023
 
-78)plump (adjective) – полный
+78)plump (adjective) – полный, a little bit fat, which is normal
 
 I swear, I’m gonna get plump
 
@@ -259,45 +255,3 @@ The child was pale and skinny.
 82)curly (adjective) – кудрявый
 
 Enissa is described as having distinctive large brown eyes and brown curly hair
-
-# 11 Feb 2023
-
-84)fog (noun) – туман
-
-85)foggy (adjective) – туманный
-
-86)cloud (noun) – облако
-
-87)cloudy (adjective) – облачный
-
-88)hail (noun) – град
-
-89)hailstorm (noun) – град
-
-90)puddle (noun) – лужа
-
-91)storm (noun) – шторм, буря, ураган, гроза
-
-92)stormy (adjective) – штормовой
-
-93)wind (noun) – ветер
-
-94)breeze (noun) – легкий ветер
-
-It's so nice to feel a gentle breeze on my cheek
-
-We get a nice breeze from the window, so we don't need to turn on the air conditioning
-
-95)windy (adjective) – ветренный
-
-96)to blow (verb) – дуть
-
-97)big breakfast (phrase) – сытный, плотный завтрак
-
-98)big lunch (phrase) – сытный, плотный обед
-
-# 12 Feb 2023
-
-99)civil (adjective) – гражданский
-
-100)civilian (noun) – гражданский
