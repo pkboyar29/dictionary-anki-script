@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+// TODO bug: не добавляет последнее слово
+
 const partsOfSpeech = [
   'noun',
   'verb',
@@ -36,6 +38,7 @@ const translationAndMeaningRe = /\)\s*[—–-−-]\s*(.+)$/; // находим 
 const categories = [
   'food & cooking',
   'anatomy & health',
+  'sport',
   'weather',
   'programming & it',
   'flora',
@@ -190,7 +193,7 @@ function createCsvLine(csvItem) {
       `"${escapeCsvQuotes(csvItem.translation)}"`,
       `"${escapeCsvQuotes(csvItem.meaning)}"`,
       `"${escapeCsvQuotes(csvItem.comment)}"`,
-      `${category}`,
+      `${category === 'none' ? '' : category}`,
     ].join(';') + '\n'
   );
 }
@@ -281,9 +284,6 @@ for (let i = 0; i < mdFileLines.length; i++) {
       const { translation, meaning } = splitTranslationAndMeaning(
         translationAndMeaning,
       );
-      if (!translation) {
-        throw new Error('translation');
-      }
 
       csvItem.createdDate = createdDate;
       csvItem.word = word;

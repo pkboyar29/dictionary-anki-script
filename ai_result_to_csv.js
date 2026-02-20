@@ -38,7 +38,11 @@ for (let i = 0; i < fileNames.length; i++) {
 
     // сравнение слов на всякий случай
     if (mainCsvRecords[j][1] === value[0]) {
-      mainCsvRecords[j][6] = value[1];
+      if (value[1] === 'none') {
+        mainCsvRecords[j][6] = '';
+      } else {
+        mainCsvRecords[j][6] = value[1];
+      }
     }
   }
 }
